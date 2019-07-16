@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Semente</title>
+        <!--<link rel='icon' href="{% static '.ico' %}" type='image/x-icon' />
+        <link rel='shortcut icon' href="{% static '.ico' %}" type='image/x-icon' />-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    </head>
+
+    <body>
+        <nav class="site-header sticky-top py-1">
+          <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2" href="#">
+              <img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png" alt="Python Community" width="100">
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Beneficiados</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Historias</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Necessitados</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Sponsers</a>
+          </div>
+        </nav>
+
+
+        <main>
+            {% block content_page %}
+
+            {% endblock  %}
+        </main>
+
+
+        <footer class="container py-5">
+          <div class="row">
+            <div class="col-12 col-md">
+                <img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png" alt="Python Community" width="200">
+                <small class="d-block mb-3 text-muted">&copy; {% now "jS F Y" %}</small>
+            </div>
+            <div class="col-6 col-md">
+              <h5>Features</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">MPesa Payments</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h5>Project</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">GitHub</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h5>Associations</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">Empresas</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h5>About</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">Team</a></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
